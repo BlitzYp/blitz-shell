@@ -18,7 +18,7 @@ int main()
         read_line(line);
         char** args = parse(line);
         pid_t id;
-        if (id = fork() != 0) wait( NULL );
+        if ((id = fork()) != 0) wait( NULL );
         else if (id < 0)
         {
             fprintf(stderr, "***ERROR***\nFailed to fork a new process!\n");
